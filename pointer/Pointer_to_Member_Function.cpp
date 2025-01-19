@@ -16,12 +16,11 @@ public:
 };
 int main(){
   // Pointer to the member function 'add' of Calculator class
-    int (Calculator::*ptr)(int, int) = &Calculator::add;
+    Calculator *ptr ;
 
-    // Create an object of the Calculator class
-    Calculator calc;
+   int c= ptr->add(5,6);
 
     // Call the 'add' function using the pointer to member function
-    cout << "Sum: " << (calc.*ptr)(5, 5) << endl;  // Using pointer to member function
+    cout << "Sum: " << c<< endl;  // Using pointer to member function
 
 }
